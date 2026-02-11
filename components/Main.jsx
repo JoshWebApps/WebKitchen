@@ -38,7 +38,7 @@ export default function Main() {
       <div className="relative" ref={heroContainer}>
         <Hero />
       </div>
-      <div className="relative z-4" ref={secondaryContainer}>
+      <div className="relative z-4 bg-secondary" ref={secondaryContainer}>
         <Mission />
         <History />
       </div>

@@ -23,7 +23,7 @@ export default function Hero() {
         transformOrigin: "left",
         duration: 2,
         ease: "power4.out",
-        delay: 3.5,
+        delay: 3.2,
       });
 
       gsap.to(bgRef.current, {
@@ -54,7 +54,7 @@ export default function Hero() {
 
           <div className="w-1/2 h-fit space-y-[1.5vw]">
             <div ref={lineRef} className="w-full scale-x-0 h-px bg-secondary" />
-            <AnimatedCopy delay={3.8} className="text-[1.5vw] w-[90%]">
+            <AnimatedCopy delay={3.5} className="text-[1.5vw] w-[90%]">
               For over 75 years, we have been recycling used solvents and
               refining them into high-quality products - safely, efficiently,
               and sustainably.

@@ -49,7 +49,7 @@ export default function Nav() {
           {navItems.map((item, index) => {
             return (
               <div
-                className={`${index === 0 ? "rounded-l-sm" : ""} px-[2vw] border-r border-black/20 whitespace-nowrap bg-secondary/80 py-[0.9vw] backdrop-blur-sm flex items-center gap-[0.3vw] text-[1vw] `}
+                className={`${index === 0 ? "rounded-l-sm" : ""} px-[2vw] border-r border-black/20 whitespace-nowrap bg-secondary/80 py-[0.9vw] backdrop-blur-sm flex items-center gap-[0.6vw] text-[1vw] `}
                 key={index}
               >
                 {item !== "Careers" && (
