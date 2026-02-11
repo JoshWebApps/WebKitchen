@@ -86,19 +86,19 @@ export default function History() {
       gsap.to(line, {
         scaleX: 1,
         transformOrigin: "left",
-        duration: 1.5,
+        duration: 2,
         ease: "power4.out",
         scrollTrigger: {
           trigger: line,
-          start: `top bottom`,
+          start: `top bottom+=20%`,
         },
       });
     });
   }, []);
 
   return (
-    <div className="w-full h-fit mainXPadding bg-secondary  text-primary ">
-      <div className="w-fit">
+    <div className="w-full h-fit bg-secondary  text-primary  ">
+      <div className="w-fit mainXPadding">
         <div className="w-full h-px bg-primary" />
         <div className="flex mediumText tracking-tight gap-[1vw] mt-[1vw] ">
           <h2 className="font-light">02</h2>
@@ -106,25 +106,27 @@ export default function History() {
         </div>
       </div>
 
-      <div className="w-full mt-[7svh] ">
+      <div className="w-full mt-[7svh]  ">
         {years.map((item, index) => {
           return (
-            <React.Fragment key={index}>
-              {index !== 0 && (
-                <div
-                  ref={(el) => (lines.current[index] = el)}
-                  className="w-full h-px bg-primary scale-x-0"
-                />
+            <div key={index}>
+              {index === years.length - 1 && (
+                <div className="w-full">
+                  <div
+                    ref={(el) => (lines.current[index] = el)}
+                    className="h-px bg-primary scale-x-0 origin-left mx-[5vw]"
+                  />
+                </div>
               )}
 
               <div
                 key={index}
-                className={`w-full h-fit flex gap-[20vw] items-center py-[2vw]   `}
+                className={`w-full h-fit -my-px hover:bg-primary hover:text-secondary duration-500 ease-in-out text-primary flex gap-[20vw] items-center py-[2vw] hover:opacity-100 opacity-70 `}
               >
-                <div>
+                <div className="pl-[5vw]">
                   <h3 className="text-[5vw]">{item.year}</h3>
                 </div>
-                <div>
+                <div className="pr-[5vw]">
                   {" "}
                   <AnimatedCopy duration={1} className="mediumText">
                     {item.paragraph}
@@ -132,12 +134,14 @@ export default function History() {
                 </div>
               </div>
               {index !== years.length - 1 && (
-                <div
-                  ref={(el) => (lines.current[index] = el)}
-                  className="w-full h-px bg-primary  scale-x-0"
-                />
+                <div className="w-full">
+                  <div
+                    ref={(el) => (lines.current[index] = el)}
+                    className="h-px bg-primary scale-x-0 origin-left mx-[5vw]"
+                  />
+                </div>
               )}
-            </React.Fragment>
+            </div>
           );
         })}
       </div>
