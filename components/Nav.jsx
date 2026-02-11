@@ -25,7 +25,7 @@ export default function Nav() {
       opacity: 1,
       duration: 1.5,
       ease: "power4.out",
-      delay: 3.25,
+      delay: 3.8,
     });
 
     gsap.to(navRef.current, {
