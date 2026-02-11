@@ -110,15 +110,6 @@ export default function History() {
         {years.map((item, index) => {
           return (
             <div key={index}>
-              {index === years.length - 1 && (
-                <div className="w-full">
-                  <div
-                    ref={(el) => (lines.current[index] = el)}
-                    className="h-px bg-primary scale-x-0 origin-left mx-[5vw]"
-                  />
-                </div>
-              )}
-
               <div
                 key={index}
                 className={`w-full h-fit -my-px hover:bg-primary hover:text-secondary duration-500 ease-in-out text-primary flex gap-[20vw] items-center py-[2vw] hover:opacity-100 opacity-70 `}
