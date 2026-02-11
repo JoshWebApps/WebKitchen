@@ -21,6 +21,13 @@ export default function Nav() {
   useGSAP(() => {
     const vh = window.innerHeight;
 
+    gsap.to(logoRef.current, {
+      opacity: 1,
+      duration: 1.5,
+      ease: "power4.out",
+      delay: 3.25,
+    });
+
     gsap.to(navRef.current, {
       y: 0,
       scrollTrigger: {
@@ -34,7 +41,10 @@ export default function Nav() {
 
   return (
     <>
-      <div ref={logoRef} className="fixed top-[3svh] left-[5vw] z-10 w-[3vw]">
+      <div
+        ref={logoRef}
+        className="fixed top-[3svh] left-[5vw] z-10 w-[3vw] opacity-0"
+      >
         <img
           src="/images/logo.png"
           alt="Logo Image"

@@ -29,26 +29,26 @@ export default function Mission() {
       <div className="w-full mt-[7svh] ">
         <AnimatedCopy className="largeText">
           Through our commitment to{" "}
-          <span className="bg-primary/40 rounded-sm px-[1vw] ">
+          <span className="bg-primary/40 rounded-sm px-[0.5vw] ">
             sustainability
           </span>{" "}
           and{" "}
-          <span className="bg-primary/40 rounded-sm px-[1vw]">
+          <span className="bg-primary/40 rounded-sm px-[0.5vw]">
             leading technical expertise
           </span>{" "}
           we turn your solvent-containing waste into valuable resources
           supporting a{" "}
-          <span className="bg-primary/40 rounded-sm px-[1vw]">
+          <span className="bg-primary/40 rounded-sm px-[0.5vw]">
             sustainable economic cycle.
           </span>{" "}
           With 2 highly specialised toll distillation plants in Bochum and
           Pfofeld, we work with you to realise your individual needs, whether it
           is simple disposal or
-          <span className="bg-primary/40 rounded-sm px-[1vw]">
+          <span className="bg-primary/40 rounded-sm px-[0.5vw]">
             transform
           </span>{" "}
           your used solvents into{" "}
-          <span className="bg-primary/40 rounded-sm px-[1vw]">
+          <span className="bg-primary/40 rounded-sm px-[0.5vw]">
             first class products
           </span>
           delivered according to your specific formulations and requirements.
