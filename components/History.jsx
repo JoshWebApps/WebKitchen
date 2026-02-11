@@ -1,4 +1,10 @@
 import React from "react";
+import AnimatedCopy from "./Text/AnimatedCopy";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function History() {
   const years = [
@@ -73,6 +79,24 @@ export default function History() {
     },
   ];
 
+  const lines = React.useRef([]);
+  const containers = React.useRef([]);
+
+  useGSAP(() => {
+    lines.current.forEach((line) => {
+      gsap.to(line, {
+        scaleX: 1,
+        transformOrigin: "left",
+        duration: 1.5,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: line,
+          start: `top bottom`,
+        },
+      });
+    });
+  }, []);
+
   return (
     <div className="w-full h-fit mainXPadding bg-secondary  text-primary">
       <div className="w-fit">
@@ -86,18 +110,38 @@ export default function History() {
       <div className="w-full mt-[7svh] ">
         {years.map((item, index) => {
           return (
-            <div
+            <React.Fragment
+              ref={(el) => (containers.current[index] = el)}
               key={index}
-              className={`w-full h-fit flex gap-[20vw] items-center py-[2vw] ${index === 0 ? "border-b" : index === years.length - 1 ? "border-t" : "border-y"} `}
             >
-              <div>
-                <h3 className="text-[5vw]">{item.year}</h3>
+              {index !== 0 && (
+                <div
+                  ref={(el) => (lines.current[index] = el)}
+                  className="w-full h-px bg-primary scale-x-0"
+                />
+              )}
+
+              <div
+                key={index}
+                className={`w-full h-fit flex gap-[20vw] items-center py-[2vw]   `}
+              >
+                <div>
+                  <h3 className="text-[5vw]">{item.year}</h3>
+                </div>
+                <div>
+                  {" "}
+                  <AnimatedCopy duration={0.5} className="mediumText">
+                    {item.paragraph}
+                  </AnimatedCopy>
+                </div>
               </div>
-              <div>
-                {" "}
-                <p className="mediumText">{item.paragraph}</p>
-              </div>
-            </div>
+              {index !== years.length - 1 && (
+                <div
+                  ref={(el) => (lines.current[index] = el)}
+                  className="w-full h-px bg-primary  scale-x-0"
+                />
+              )}
+            </React.Fragment>
           );
         })}
       </div>
