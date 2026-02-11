@@ -156,9 +156,9 @@ const HeroBackground = ({ bgRef }) => {
 
     gsap.to(images.current[0], {
       scale: 1,
-      duration: 2,
+      duration: 2.5,
       ease: "power4.out",
-      delay: 2.8,
+      delay: 2.85,
     });
 
     tl.to(images.current[0], { opacity: 0, duration: 2 })
