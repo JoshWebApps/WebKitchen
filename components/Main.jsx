@@ -31,7 +31,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="relative w-screen h-full overscroll-none overflow-hidden">
+    <div className="relative max-w-screen h-full overscroll-none overflow-hidden">
       <Loader />
       <Nav />
 
