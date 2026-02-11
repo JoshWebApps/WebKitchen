@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-untitled: "Aeonik", sans-serif;
+
+  --color-primary: #009129;
+  --color-secondary: #ffffff;
+}
+
+.mainXPadding {
+  padding: 5vw 5vw;
+}
+
+.mediumText {
+  font-size: 1.6vw;
+}
+
+.largeText {
+  font-size: 3.1vw;
+  line-height: 1.1;
+}

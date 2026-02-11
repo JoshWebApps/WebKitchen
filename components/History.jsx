@@ -1,0 +1,106 @@
+import React from "react";
+
+export default function History() {
+  const years = [
+    {
+      year: 1949,
+      paragraph:
+        "Foundation of the company Orm Bergold Chemie by Mr. Orm Bergold; start of solvent recycling at the Langlau plant in the Nuremberg areal",
+    },
+    {
+      year: 1958,
+      paragraph: "Start of production in Bochum",
+    },
+    {
+      year: 1991,
+      paragraph: "Takeover of Orm Bergold Chemie by Safetykleen Corp. USA",
+    },
+    {
+      year: 1992,
+      paragraph:
+        "Start of the processing of solvent-containing waste for Safetykleen",
+    },
+    {
+      year: 1995,
+      paragraph: "Start of distillation of mineral spirit for Safetykleen",
+    },
+    {
+      year: 1996,
+      paragraph:
+        "Establishment of the drum factory for processing containers different sizes",
+    },
+    {
+      year: 1997,
+      paragraph:
+        "Expansion to a European general disposal center for Safetykleen",
+    },
+    {
+      year: 1998,
+      paragraph: "Management buyout of Safetykleen Europe",
+    },
+    {
+      year: 1999,
+      paragraph: "Additional focus on the sale of regenerated solvents",
+    },
+    {
+      year: 2001,
+      paragraph: "Expansion of the clean product tanks at the Bochum site",
+    },
+    {
+      year: 2001,
+      paragraph:
+        "Introduction of water-based cleaning agents (hydro-rinsing agents)",
+    },
+    {
+      year: 2004,
+      paragraph:
+        "Launch of the rectification column for the regeneration and fractionation of high-quality solvents (purity > 99.5)",
+    },
+    {
+      year: 2007,
+      paragraph:
+        "General disposal company for the Safetykleen companies in France, Italy & England",
+    },
+    {
+      year: 2023,
+      paragraph:
+        "Leading supplier and general disposer of regenerated solvents and waste for Safetykleen International",
+    },
+    {
+      year: "Today",
+      paragraph:
+        "Leading supplier and general disposer of regenerated solvents and waste for Safetykleen International",
+    },
+  ];
+
+  return (
+    <div className="w-full h-fit mainXPadding bg-secondary  text-primary">
+      <div className="w-fit">
+        <div className="w-full h-px bg-primary" />
+        <div className="flex mediumText tracking-tight gap-[1vw] mt-[1vw] ">
+          <h2 className="font-light">02</h2>
+          <p>Our History</p>
+        </div>
+      </div>
+
+      <div className="w-full mt-[7svh] ">
+        {years.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className={`w-full h-fit flex gap-[20vw] items-center py-[2vw] ${index === 0 ? "border-b" : index === years.length - 1 ? "border-t" : "border-y"} `}
+            >
+              <div>
+                <h3 className="text-[5vw]">{item.year}</h3>
+              </div>
+              <div>
+                {" "}
+                <p className="mediumText">{item.paragraph}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
