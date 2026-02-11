@@ -59,7 +59,7 @@ export default function Nav() {
           {navItems.map((item, index) => {
             return (
               <div
-                className={`${index === 0 ? "rounded-l-sm" : ""} px-[2vw] border-r border-black/20 whitespace-nowrap bg-secondary/80 py-[0.9vw] backdrop-blur-sm flex items-center gap-[0.6vw] text-[1vw] `}
+                className={`${index === 0 ? "rounded-l-sm" : ""} px-[2vw] border-r cursor-pointer border-black/20 whitespace-nowrap bg-secondary/80 hover:opacity-30 duration-300 ease-in-out transition-opacity py-[0.9vw] backdrop-blur-sm flex items-center gap-[0.6vw] text-[1vw] `}
                 key={index}
               >
                 {item !== "Careers" && (
@@ -88,7 +88,7 @@ export default function Nav() {
               </div>
             );
           })}
-          <div className="px-[1.5vw] whitespace-nowrap text-secondary bg-primary  backdrop-blur-sm flex items-center gap-[0.3vw] text-[1vw] rounded-r-sm ">
+          <div className="px-[1.5vw] whitespace-nowrap text-secondary cursor-pointer hover:opacity-30 duration-300 ease-in-out transition-opacity bg-primary  backdrop-blur-sm flex items-center gap-[0.3vw] text-[1vw] rounded-r-sm ">
             <p>Contact us</p>
           </div>
         </div>

@@ -181,7 +181,7 @@ const HeroBackground = ({ bgRef }) => {
         ref={(el) => (images.current[0] = el)}
         src="/images/clean-tank-farm.jpg"
         alt="Clean Tank Farm"
-        className="w-full h-full object-cover absolute inset-0 scale-120"
+        className="w-full h-full object-cover absolute inset-0 scale-140"
       />
       <img
         ref={(el) => (images.current[1] = el)}

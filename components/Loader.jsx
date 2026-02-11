@@ -20,7 +20,7 @@ export default function Loader() {
 
     tl.to(coverRef.current, {
       opacity: 0,
-      duration: 1.5,
+      duration: 2,
       ease: "power4.out",
     })
       .to(
