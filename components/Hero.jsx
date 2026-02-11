@@ -158,7 +158,7 @@ const HeroBackground = ({ bgRef }) => {
       scale: 1,
       duration: 2,
       ease: "power4.out",
-      delay: 2.5,
+      delay: 2.8,
     });
 
     tl.to(images.current[0], { opacity: 0, duration: 2 })
@@ -181,7 +181,7 @@ const HeroBackground = ({ bgRef }) => {
         ref={(el) => (images.current[0] = el)}
         src="/images/clean-tank-farm.jpg"
         alt="Clean Tank Farm"
-        className="w-full h-full object-cover absolute inset-0 scale-140"
+        className="w-full h-full object-cover absolute inset-0 scale-150"
       />
       <img
         ref={(el) => (images.current[1] = el)}
