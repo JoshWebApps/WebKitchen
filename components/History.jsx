@@ -80,7 +80,6 @@ export default function History() {
   ];
 
   const lines = React.useRef([]);
-  const containers = React.useRef([]);
 
   useGSAP(() => {
     lines.current.forEach((line) => {
@@ -98,7 +97,7 @@ export default function History() {
   }, []);
 
   return (
-    <div className="w-full h-fit mainXPadding bg-secondary  text-primary">
+    <div className="w-full h-fit mainXPadding bg-secondary  text-primary ">
       <div className="w-fit">
         <div className="w-full h-px bg-primary" />
         <div className="flex mediumText tracking-tight gap-[1vw] mt-[1vw] ">
@@ -110,10 +109,7 @@ export default function History() {
       <div className="w-full mt-[7svh] ">
         {years.map((item, index) => {
           return (
-            <React.Fragment
-              ref={(el) => (containers.current[index] = el)}
-              key={index}
-            >
+            <React.Fragment key={index}>
               {index !== 0 && (
                 <div
                   ref={(el) => (lines.current[index] = el)}
@@ -130,7 +126,7 @@ export default function History() {
                 </div>
                 <div>
                   {" "}
-                  <AnimatedCopy duration={0.5} className="mediumText">
+                  <AnimatedCopy duration={1} className="mediumText">
                     {item.paragraph}
                   </AnimatedCopy>
                 </div>
